@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JEU 1</title>
+    <script defer type="text/javascript" src="le_java_script.js"></script>
+    
+    <link href="le_style.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+      <img src="images/1571535518555.jpg" width="1920" height="1080" id="bg_image" usemap="#objectMap" >
+
+      <map name="objectMap">
+        <area shape="rect" coords="425,400,525,525" onclick="change_level()" id="zone1" alt="Niveau Suivant">
+
+      </map>
+      <nav id="barre_haut">
+        <div id="contenant_chrono">
+            <h1 data-chronometer>00:00</h1>
+        </div>
+      </nav>
+
+      
+      <img id="play" src="images/jouer.png" width="100">
+      <img id="pause" src="images/bouton-pause-compose-de-deux-lignes-verticales.png" width="50">
+      <img id="reset" src="images/reset.png" width="50">
+
+
+      <nav id="contenant_principal_objets_a_trouver">
+          <div class="contenant_objet_a_trouver">
+                
+          </div>
+          <div class="contenant_objet_a_trouver">
+
+          </div>
+          <div class="contenant_objet_a_trouver">
+
+          </div>
+          <div class="contenant_objet_a_trouver">
+
+          </div>
+        </nav>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="jquery.rwdImageMaps.min.js"></script>
+        <script> /*On click of an object*/
+        $(document).ready(function(e) {
+          $('img[usemap]').rwdImageMaps();
+          
+          $('area').on('click', function() {
+            alert($(this).attr('alt') + ' clicked');
+          });
+        });
+        </script>
+      
+        
+      
+
+  </body>
+</html>
