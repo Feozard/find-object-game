@@ -92,7 +92,7 @@ var play=document.querySelector('#play');
   }
   function change_level(){
     document.getElementById("bg_image").src="images/1529602007693.jpg";
-    document.getElementById("zone1").coords="200,400,250,525";
+    document.getElementById("zone1").coords="144,165,272,304";
     play.style.display="inherit";
     clearInterval(chronometerCall)
     chronometerDisplay.textContent = `00:00`
